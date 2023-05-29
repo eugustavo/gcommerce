@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head'
 import { Box, HStack, Text } from '@chakra-ui/react'
 
 import { Logo } from '../Logo'
@@ -6,7 +7,11 @@ import { Logo } from '../Logo'
 import userIcon from '@/assets/user-icon.png'
 import cartIcon from '@/assets/cart-icon.png'
 
-export function Header() {
+interface HeaderProps {
+  headerTitle: string
+}
+
+export function Header({ headerTitle }: HeaderProps) {
   return (
     <HStack
       w="full"
@@ -15,6 +20,10 @@ export function Header() {
       alignItems="center"
       justifyContent="center"
     >
+      <Head>
+        <title>{headerTitle}</title>
+      </Head>
+
       <HStack
         w="full"
         maxW="1200px"

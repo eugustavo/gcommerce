@@ -61,7 +61,7 @@ export default function Home() {
     <VStack flex={1} w="100vw" h="100vh" spacing={0} overflowY="auto" pb={12}>
       <HeaderAlert />
 
-      <Header />
+      <Header headerTitle="GCommerce" />
 
       <Categories />
 

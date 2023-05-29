@@ -91,7 +91,7 @@ export default function Product() {
     <VStack flex={1} w="100vw" h="100vh" spacing={0} overflowY="auto">
       <HeaderAlert />
 
-      <Header />
+      <Header headerTitle={product.name} />
 
       {loading ? (
         <Center flex={1}>
